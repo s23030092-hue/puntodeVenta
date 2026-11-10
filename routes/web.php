@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+use App\Http\Controllers\ConsultaEloquentController;
+
+Route::get('/reporte-ventas', [ConsultaEloquentController::class, 'index']);
